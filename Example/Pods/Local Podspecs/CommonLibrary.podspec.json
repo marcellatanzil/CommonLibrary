@@ -1,0 +1,22 @@
+{
+  "name": "CommonLibrary",
+  "version": "0.1.0",
+  "summary": "A short description of CommonLibrary.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/marcellatanzil/CommonLibrary",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "marcellatanzil": "tanzil.10@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/marcellatanzil/CommonLibrary.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CommonLibrary/Classes/**/*"
+}
