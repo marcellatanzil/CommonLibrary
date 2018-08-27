@@ -53,7 +53,7 @@ public extension UIView {
     }
 }
 
-extension String {
+public extension String {
     
     func encodeUriComponent() -> String? {
         let characterSet = NSMutableCharacterSet.alphanumeric()
@@ -70,7 +70,7 @@ extension String {
     }
 }
 
-extension UIViewController {
+public extension UIViewController {
 
     func showSimpleAlert(title: String, message: String, button: String, actionBlock: (() -> ())? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -122,7 +122,7 @@ extension UIViewController {
     }
 }
 
-extension UIColor {
+public extension UIColor {
     static var dukeTeal: UIColor = UIColor(red: 0/255, green: 139/255, blue: 176/255, alpha: 1)
     static var dukeLightTeal: UIColor = UIColor(red: 95/255, green: 173/255, blue: 196/255, alpha: 1)
     static var dukeLighterTeal: UIColor = UIColor(red: 73/255, green: 202/255, blue: 223/255, alpha: 1)
@@ -135,7 +135,7 @@ extension UIColor {
     static var dukeRed: UIColor = UIColor(red: 255/255, green: 87/255, blue: 20/255, alpha: 1)
 }
 
-extension UISearchBar {
+public extension UISearchBar {
     var backgroundView: UIView? {
         if let textfield = self.value(forKey: "searchField") as? UITextField {
             if let view = textfield.subviews.first {
@@ -150,7 +150,7 @@ extension UISearchBar {
 }
 
 private var __maxLengths = [UITextField: Int]()
-extension UITextField {
+public extension UITextField {
     @IBInspectable var maxLength: Int {
         get {
             guard let l = __maxLengths[self] else {
@@ -170,14 +170,14 @@ extension UITextField {
     }
 }
 
-extension Data {
+public extension Data {
     mutating func append(string: String) {
         let data = string.data(using: String.Encoding.utf8)
         append(data!)
     }
 }
 
-extension DispatchQueue {
+public extension DispatchQueue {
     class func dispatchSyncToMain(_ block: () -> Void) {
         // This is to ensure there wont be any deadlock situation in case it is already on main thread
         if Thread.isMainThread {
